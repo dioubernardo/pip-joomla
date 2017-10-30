@@ -18,6 +18,9 @@ if(!@isset($this->params))
 TmplPadraoGoverno01Helper::init( $this );
 $active_item = TmplPadraoGoverno01Helper::getActiveItemid();
 TmplPadraoGoverno01Helper::clearDefaultScripts( $this );
+
+// Check for a custom CSS file
+JHtml::_('stylesheet', 'custom.css', array('version' => 'auto', 'relative' => true));
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-br" dir="ltr"> <![endif]-->
@@ -29,7 +32,6 @@ TmplPadraoGoverno01Helper::clearDefaultScripts( $this );
     <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/bootstrap/css/bootstrap.min.css" type='text/css'/>
     <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/template-<?php echo $this->params->get('cor', 'verde'); ?>.css" type='text/css'/>
     <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/font-awesome/css/font-awesome.min.css" type='text/css'/>
-    <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/custom.css" type='text/css'/>
     <!--[if lt IE 10]><link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/ie.css" /><![endif]-->
     <!--[if lt IE 9]><link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/ie8.css" /><![endif]-->
     <!--[if lt IE 8]><link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/ie7.css" /><link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css" /><![endif]-->

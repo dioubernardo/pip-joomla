@@ -189,13 +189,7 @@ class TmplPadraoGoverno01Helper
 		<?php
 		endif;
 	}
-	static function getCustomStyle( &$tmpl ){
-		?>
-		<link rel="stylesheet" href="<?php echo $tmpl->baseurl; ?>/templates/<?php echo $tmpl->template; ?>/css/custom.css" type='text/css'/>
-		<?php
-	}
-
-
+	
 	static function getIconsStyle( &$tmpl )
 	{
 		if($tmpl->params->get('icon_style', 'bitmap-portal-brasil') == 'bitmap-portal-brasil'):

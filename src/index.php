@@ -15,6 +15,9 @@ require JPATH_SITE .'/templates/'.$this->template.'/helper.php';
 TmplPadraoGoverno01Helper::init( $this ); //inicializacao de funcoes do template, como configuracao de cor, se alterada via get, limpeza do head padrao do joomla e outras providencias.
 $active_item = TmplPadraoGoverno01Helper::getActiveItemid();
 
+// Check for a custom CSS file
+JHtml::_('stylesheet', 'custom.css', array('version' => 'auto', 'relative' => true));
+
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-br" dir="ltr"> <![endif]-->
@@ -29,7 +32,6 @@ $active_item = TmplPadraoGoverno01Helper::getActiveItemid();
     <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/template-<?php echo $this->params->get('cor', 'verde'); ?>.css" type='text/css'/>
     <?php TmplPadraoGoverno01Helper::getIconsStyle( $this ); ?>
     <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/font-awesome/css/font-awesome.min.css" type='text/css'/>
-    <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/custom.css" type='text/css'/>
     <!--[if lt IE 10]>
     <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/ie.css" />
     <![endif]-->
